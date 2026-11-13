@@ -347,7 +347,6 @@ public class CBBPrototype : MonoBehaviour
         buttonStyle.onNormal.textColor = Color.white;
         buttonStyle.onHover.textColor = Color.white;
         buttonStyle.onActive.textColor = Color.white;
-        buttonStyle.disabled.textColor = new Color(0.72f, 0.76f, 0.82f, 1f);
         debugButtonStyle = new GUIStyle(GUI.skin.button)
         {
             font = uiFont,
@@ -363,7 +362,6 @@ public class CBBPrototype : MonoBehaviour
         debugButtonStyle.onNormal.textColor = Color.white;
         debugButtonStyle.onHover.textColor = Color.white;
         debugButtonStyle.onActive.textColor = Color.white;
-        debugButtonStyle.disabled.textColor = new Color(0.72f, 0.76f, 0.82f, 1f);
     }
 
     private GUIStyle NewStyle(int size, FontStyle style, Color color, TextAnchor alignment)
