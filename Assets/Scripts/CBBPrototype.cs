@@ -321,7 +321,7 @@ public class CBBPrototype : MonoBehaviour
     private void CreateStyles()
     {
         if (titleStyle != null) return;
-        uiFont = Font.CreateDynamicFontFromOSFont(new[] { "Yu Gothic UI Semibold", "Meiryo UI", "Meiryo", "Noto Sans CJK JP", "Arial" }, 36);
+        uiFont = Font.CreateDynamicFontFromOSFont(new[] { "Yu Gothic UI Bold", "Yu Gothic UI Semibold", "Meiryo UI", "Meiryo", "Noto Sans CJK JP", "Arial" }, 48);
         panelTexture = MakeTexture(new Color(0.015f, 0.025f, 0.055f, 0.92f));
         accentTexture = MakeTexture(new Color(0.88f, 0.1f, 0.18f, 0.92f));
         loadingTexture = MakeTexture(new Color(0.2f, 0.82f, 1f, 1f));
@@ -334,18 +334,36 @@ public class CBBPrototype : MonoBehaviour
         buttonStyle = new GUIStyle(GUI.skin.button)
         {
             font = uiFont,
-            fontSize = 32,
+            fontSize = 44,
             fontStyle = FontStyle.Bold,
             alignment = TextAnchor.MiddleCenter,
-            wordWrap = true
+            wordWrap = true,
+            padding = new RectOffset(14, 14, 10, 10)
         };
+        buttonStyle.normal.textColor = Color.white;
+        buttonStyle.hover.textColor = Color.white;
+        buttonStyle.active.textColor = Color.white;
+        buttonStyle.focused.textColor = Color.white;
+        buttonStyle.onNormal.textColor = Color.white;
+        buttonStyle.onHover.textColor = Color.white;
+        buttonStyle.onActive.textColor = Color.white;
+        buttonStyle.disabled.textColor = new Color(0.72f, 0.76f, 0.82f, 1f);
         debugButtonStyle = new GUIStyle(GUI.skin.button)
         {
             font = uiFont,
-            fontSize = 25,
+            fontSize = 32,
             fontStyle = FontStyle.Bold,
-            alignment = TextAnchor.MiddleCenter
+            alignment = TextAnchor.MiddleCenter,
+            padding = new RectOffset(10, 10, 6, 6)
         };
+        debugButtonStyle.normal.textColor = Color.white;
+        debugButtonStyle.hover.textColor = Color.white;
+        debugButtonStyle.active.textColor = Color.white;
+        debugButtonStyle.focused.textColor = Color.white;
+        debugButtonStyle.onNormal.textColor = Color.white;
+        debugButtonStyle.onHover.textColor = Color.white;
+        debugButtonStyle.onActive.textColor = Color.white;
+        debugButtonStyle.disabled.textColor = new Color(0.72f, 0.76f, 0.82f, 1f);
     }
 
     private GUIStyle NewStyle(int size, FontStyle style, Color color, TextAnchor alignment)
