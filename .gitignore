@@ -39,3 +39,6 @@ Thumbs.db
 # Local playtest output
 PlaytestLogs/
 
+# Unity crash/recovery scenes
+Assets/_Recovery/
+
